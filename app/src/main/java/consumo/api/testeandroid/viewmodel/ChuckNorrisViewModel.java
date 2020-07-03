@@ -25,7 +25,7 @@ public class ChuckNorrisViewModel extends ViewModel {
                     respository.getCategoriaResponse()
                             .subscribeOn(Schedulers.newThread())
                             .observeOn(AndroidSchedulers.mainThread())
-                            .subscribe(sportResponse -> listMutableLiveData.setValue(sportResponse.getmCategories()),
+                            .subscribe(chuckResponse -> listMutableLiveData.setValue(chuckResponse.getmCategories()),
                                     throwable -> Log.i("LOG", "MESSAGE -> " + throwable.getMessage()))
             );
     }
